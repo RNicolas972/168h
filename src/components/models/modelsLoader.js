@@ -6,7 +6,7 @@ export class ModelsLoader {
         return new Promise( async ( res, rej ) => {
             let loader = null;
             
-            const regex2 = new RegExp('/*.(?:max|gltf)');
+            const regex2 = new RegExp('/*.(?:max|gltf|glb)');
             const isMatch = filePath.match( regex2 )[0];
             
             switch( isMatch ) {
@@ -15,6 +15,7 @@ export class ModelsLoader {
                     break;
 
                 case '.gltf':
+                case '.glb':
                     loader = new GLTFLoader();
                     break;
                 default:
@@ -24,7 +25,7 @@ export class ModelsLoader {
             loader.setPath(defaultPath);
             loader.loadAsync(filePath)
             .then(( file ) => {
-                res( file )
+                res( file.scene.children[0] )
             })
             .catch(( err ) => {
                 console.error( err );

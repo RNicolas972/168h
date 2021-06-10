@@ -4,7 +4,7 @@ import {
     Route
 } from "react-router-dom";
 import { LoadingComponent } from './LoadingComponent/LoadingComponent';
-
+import { MovingComponent } from "./MovingComponent/MovingComponent";
 
 export const AppRouter = () => {
     return (
@@ -12,6 +12,11 @@ export const AppRouter = () => {
             <Switch>
                 <Route path="/">
                     <LoadingComponent />
+                </Route>
+            </Switch>
+            <Switch>
+                <Route path="/moving">
+                    <MovingComponent />
                 </Route>
             </Switch>
         </div>

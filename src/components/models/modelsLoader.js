@@ -23,9 +23,9 @@ export class ModelsLoader {
             }
 
             loader.setPath(defaultPath);
-            loader.loadAsync(filePath)
+            loader.loadAsync( filePath )
             .then(( file ) => {
-                res( file.scene.children[0] )
+                res( file.scene )
             })
             .catch(( err ) => {
                 console.error( err );

@@ -72,80 +72,83 @@ const LoadingComponent = () => {
     const textAddObj = `// On ajoute nos objet itérativement à notre scène. \nsceneObj.forEach(( elt ) => { \n\tscene.add( elt );\n});\nanimate(); // On appelle notre fonction animate pour lancer le rendu.`;
 
     return(
-        <div className="main-container">
-            <h3>Importer des objets</h3>
-            <p>Dans cette première partie nous allons apprendre à importer un objet dans une scène créer avec Three.JS</p>
-            <h4>Créer la fênetre de rendu</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textCanvas }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
+        <div className="loading-component">
+            <div className="main-container">
+                <h3>Importer des objets</h3>
+                <p>Dans cette première partie nous allons apprendre à importer un objet dans une scène créer avec Three.JS</p>
+                <h4>Créer la fênetre de rendu</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textCanvas }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
+                        />
+                </div>
+                <h4>Créer la fênetre de rendu</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textRender }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
                     />
+                </div>
+                <h4>Création de la camera</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textCamera }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
+                    />
+                </div>
+                <h4>Création de la lumière</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textLight }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
+                    />
+                </div>
+                <h4>Création de la Scène</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textScene }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
+                    />
+                </div>
+                <h4>Création de la function animate</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textAnimate }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
+                    />
+                </div>
+                <h4>Ajout des models à notre scène</h4>
+                <div className="block-code">
+                    <CopyBlock
+                        text={ textAddObj }
+                        language={'javascript'}
+                        showLineNumbers={ true }
+                        theme={ dracula }
+                        codeBlock
+                    />
+                </div>
+                <h4>Fênetre de rendu</h4>
+                <canvas id="totoro-renderer"></canvas>
             </div>
-            <h4>Créer la fênetre de rendu</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textRender }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
-                />
-            </div>
-            <h4>Création de la camera</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textCamera }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
-                />
-            </div>
-            <h4>Création de la lumière</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textLight }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
-                />
-            </div>
-            <h4>Création de la Scène</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textScene }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
-                />
-            </div>
-            <h4>Création de la function animate</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textAnimate }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
-                />
-            </div>
-            <h4>Ajout des models à notre scène</h4>
-            <div className="block-code">
-                <CopyBlock
-                    text={ textAddObj }
-                    language={'javascript'}
-                    showLineNumbers={ true }
-                    theme={ dracula }
-                    codeBlock
-                />
-            </div>
-            <canvas id="totoro-renderer"></canvas>
         </div>
     );
 }

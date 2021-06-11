@@ -11,11 +11,9 @@ export const AppRouter = () => {
     return (
         <div>
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <LoadingComponent />
                 </Route>
-            </Switch>
-            <Switch>
                 <Route path="/moving">
                     <MovingComponent />
                 </Route>
